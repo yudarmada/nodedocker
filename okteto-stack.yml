@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodedocker
+  name: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodedocker
+      app: frontend
   template:
     metadata:
       labels:
-        app: nodedocker
+        app: frontend
     spec:
       containers:
       - image: registry.cloud.okteto.net/yudarmada/nodedocker:express-hello
-        name: nodedocker
+        name: frontend
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodedocker
+  name: frontend
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: LoadBalancer  
   ports:
-  - name: "nodedocker"
+  - name: "frontend"
     port: 80
   selector:
-    app: nodedocker
+    app: frontend
