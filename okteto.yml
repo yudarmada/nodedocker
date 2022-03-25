@@ -1,8 +1,8 @@
-name: nodedocker
+name: frontend
 image: yudarmada/nodedocker:express-hello
 command: npn run start
 workdir: /nodeapp
 sync:
  - ./app:/nodeapp
 forward:
-  - 3000:80  
+  - 80:80  
