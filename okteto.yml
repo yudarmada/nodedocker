@@ -6,3 +6,5 @@ sync:
  - ./app:/nodeapp
 forward:
   - 80:80  
+persistentVolume:
+  enabled: false  
