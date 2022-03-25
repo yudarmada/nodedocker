@@ -25,7 +25,7 @@ metadata:
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
-  type: ClusterIP  
+  type: LoadBalancer  
   ports:
   - name: "nodedocker"
     port: 80
