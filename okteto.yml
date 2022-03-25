@@ -1,0 +1,7 @@
+name: nodedocker
+image: yudarmada/tescicd:express-hello
+command: npn run start
+sync:
+  - .:/usr/src/app
+persistentVolume:
+  enabled: false
