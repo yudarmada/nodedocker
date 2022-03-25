@@ -1,5 +1,5 @@
 name: nodedocker
-image: yudarmada/tescicd:express-hello
+image: yudarmada/nodedocker:express-hello
 command: npn run start
 sync:
   - .:/usr/src/app
