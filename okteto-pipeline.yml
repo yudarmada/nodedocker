@@ -1,5 +1,5 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
-  - okteto build -t okteto.dev/nodedocker:${OKTETO_GIT_COMMIT} nodedocker
+  - okteto build -t yudarmada/tescicd:express-hello nodedocker
 devs:
   - okteto.yml
