@@ -1,11 +1,5 @@
 name: nodedocker
 image: yudarmada/nodedocker:express-hello
 command: npn run start
-sync:
-  - .:/usr/src/app
-persistentVolume:
-  enabled: false
-environment:
-  - environment=development  
 forward:
   - 3000:80  
