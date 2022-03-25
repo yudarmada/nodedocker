@@ -1,5 +1,5 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
-  - okteto build -t registry.cloud.okteto.net/yudarmada/nodedocker:express-hello app
+  - okteto build -t registry.cloud.okteto.net/yudarmada/nodedocker:express-hello .
 devs:
   - okteto.yml
